@@ -27,13 +27,15 @@ def menu():
 
 #code for getting the public ip of the user.
 def get_public_ip():
-    ip = get('https://api.ipify.org').text
-    print('Your public IP address is: {}'.format(ip))
+    ip = get('https://api.ipify.org').text #used the api of ipify in order to get the public ip address of the user
+    print('Your public IP address is: {}'.format(ip)) #prints the public ip address
 
 #code for getting the location information of the ip address that the user inputs.
 def get_ip_location():
-    ip_address = input("input your IP Address: ")
-    response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
+    ip_address = input("input your IP Address: ") #user input for getting ip address
+    #used the api of ipapi in order to get the different data for the ip address that the user inputted.
+    response = requests.get(f'https://ipapi.co/{ip_address}/json/').json() 
+    #ip_location_data houses all the data that came from the ipapi api then prints so that the user can see.
     ip_location_data = {
         "ip": ip_address,
         "city": response.get("city"),
