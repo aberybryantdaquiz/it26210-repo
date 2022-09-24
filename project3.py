@@ -5,6 +5,7 @@ import sys
 def main():
     menu()
 
+#menu choice for user. Choice A for getting Public IP, choice B for getting IP LOC info, choice Q is exit.
 def menu():
     choice = input("""
     A: Get your Public IP
@@ -24,11 +25,12 @@ def menu():
         print("Please try again")
         menu()
 
-
+#code for getting the public ip of the user.
 def get_public_ip():
     ip = get('https://api.ipify.org').text
     print('Your public IP address is: {}'.format(ip))
 
+#code for getting the location information of the ip address that the user inputs.
 def get_ip_location():
     ip_address = input("input your IP Address: ")
     response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
