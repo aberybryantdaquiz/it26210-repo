@@ -2,8 +2,7 @@ import requests
 from requests import get
 import sys
 
-def main():
-    menu()
+
 
 #menu choice for user. Choice A for getting Public IP, choice B for getting IP LOC info, choice Q is exit.
 def menu():
