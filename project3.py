@@ -1,9 +1,33 @@
 import requests
 from requests import get
+import sys
+
+def main():
+   menu()
+
+def menu():
+    choice = input("""
+    A: Get your Public IP
+    B: Get IP Location Information
+    Q: Exit
+
+    Please enter your choice: """)
+
+    if choice == "A" or choice =="a":
+        get_public_ip()
+    elif choice == "B" or choice =="b":
+        get_ip_location()
+    elif choice=="Q" or choice=="q":
+        sys.exit
+    else:
+        print("You must only select either A or B")
+        print("Please try again")
+        menu()
+
 
 def get_public_ip():
     ip = get('https://api.ipify.org').text
-    print('My public IP address is: {}'.format(ip))
+    print('Your public IP address is: {}'.format(ip))
 
 def get_ip_location():
     ip_address = input("input your IP Address: ")
@@ -19,9 +43,6 @@ def get_ip_location():
         "asn": response.get("asn"),
         "isp":response.get("isp")
     }
-    return ip_location_data
+    return print(ip_location_data) 
 
-get_public_ip()
-
-print(get_ip_location())
-
+main()
