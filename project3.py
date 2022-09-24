@@ -3,7 +3,7 @@ from requests import get
 import sys
 
 def main():
-   menu()
+    menu()
 
 def menu():
     choice = input("""
