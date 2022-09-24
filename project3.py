@@ -47,6 +47,6 @@ def get_ip_location():
         "asn": response.get("asn"),
         "isp": response.get("isp")
     }
-    return print(ip_location_data) 
+     
 
 main()
