@@ -43,7 +43,7 @@ def get_ip_location():
         "latitude": response.get("latitude"),
         "longitude": response.get("longitude"),
         "asn": response.get("asn"),
-        "isp":response.get("isp")
+        "isp": response.get("isp")
     }
     return print(ip_location_data) 
 
