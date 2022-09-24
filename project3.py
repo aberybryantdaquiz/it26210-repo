@@ -16,9 +16,6 @@ def get_ip_location():
         "country code": response.get("country_code"),
         "latitude": response.get("latitude"),
         "longitude": response.get("longitude"),
-        "current time": response.get("current_time"),
-        "geoname id": response.get("geoname_id"),
-        "capital": response.get("capital"),
         "asn": response.get("asn"),
         "isp":response.get("isp")
     }
