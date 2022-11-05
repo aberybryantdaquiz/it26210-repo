@@ -43,6 +43,7 @@ def get_ip_location():
         "country": response.get("country_name"),
         "country code": response.get("country_code"),
         "currency": response.get("currency_name"),
+        "languages": response.get("languages"),
         "latitude": response.get("latitude"),
         "longitude": response.get("longitude"),
         "asn": response.get("asn"),
