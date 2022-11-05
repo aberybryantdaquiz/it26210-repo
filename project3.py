@@ -42,6 +42,7 @@ def get_ip_location():
         "region": response.get("region"),
         "country": response.get("country_name"),
         "country code": response.get("country_code"),
+        "currency": response.get("currency_name"),
         "latitude": response.get("latitude"),
         "longitude": response.get("longitude"),
         "asn": response.get("asn"),
